@@ -687,6 +687,9 @@ local function loadSettings()
 		autoloadEnabled = data.autoload ~= nil and data.autoload or true
 		silentloadEnabled = data.silentload or false
 		version = data.version or "New"
+		selectedOption = data.selected or nil
+		getgenv().autoload = autoloadEnabled
+		getgenv().silentload = silentloadEnabled
 	end
 end
 -- ==============================================================
@@ -888,4 +891,4 @@ if selectedOption then
 			VersionToggle.Visible = true
 		end
 	end
-end
+end 
